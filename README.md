@@ -1,7 +1,7 @@
-# DSA1
+# Data Struct. Algorithm 1
 Some samples about data structures and its applications
 
-<h2> Guia da disciplina </h1>
+<h2> Discipline Guide </h1>
 <ul>
 <li> Tipos abstratos de dados, pilhas com alocação sequencial e estática</li>
 <li> Alocação encadeada e dinâmica, implementação de pilhas e filas</li>
