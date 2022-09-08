@@ -1,40 +1,15 @@
 #include <iostream>
 #include <cstdlib>
 #include <chrono>
+
+
+#include "include/sorting.h"
+
 using namespace std;
-
-
-//Declare rand seed
-
 
 int *gera_vetor(int size_vec);
 int *copia_vetor(int v[], int size_vec);
-bool search( int v[],int size_vec, int num );
 void display(int v[], int size);
-
-//Prototipos das funcoes de ordenacao
-	//Selection Sort
-void selection_sort(int v[], int size);
-
-	//Insertion Sort
-void insertion_sort(int v[], int size);
-
-	//Bubble Sort
-void bubble_sort(int v[], int size);
-
-	//Bubble Sort c/ melhoria
-void bubble_sort_v2(int v[], int size);
-
-
-// Declaracao do prototipos das funcoes de busca
-	//Busca sequencial - nao eh necessario ordenacao do vetor
-int seq_search( int v[],int size_vec, int num );
-
-	//Busca Binaria - necessario uso de vetor ordenado
-int bin_search( int v[], int size_vec, int num );
-int _bin_search( int v[], int left, int right, int x );
-
-
 
 
 // Inicio do programa
@@ -149,6 +124,7 @@ int *gera_vetor(int size_vec){
 
 	return v;
 }
+
 int *copia_vetor(int v[], int size_vec){
 	int *cp_vec = new int[size_vec];
 	for(int i = 0; i<size_vec; i++)
@@ -161,95 +137,4 @@ void display(int v[], int size){
 	for(int i = 0; i < size; i ++)
 		cout << v[i] << " ";
 	cout << "\n";
-}
-
-//Busca Sequencial: nao necessariamente o vetor esta ordenado
-bool search( int v[],int size_vec, int num){
-	int i = 0;
-	while((i<size_vec) and (v[i]!=num)){
-		i++;
-	}
-	if(i<size_vec) return true;
-	else return false; 
-}
-
-int seq_search( int v[],int size_vec, int num){
-	int i = 0;
-	while((i<size_vec) and (v[i]!=num)){
-		i++;
-	}
-	if(i<size_vec) return i;
-	else return -1; 
-}
-
-int bin_search( int v[],int size_vec, int num ){
-	return (_bin_search(v, 0, size_vec-1, num ));
-}
-
-int _bin_search(int v[], int left, int right, int x ){
-	int meio = (left + right)/2;
-	if (left > right)
-		return -1;
-
-	if (v[meio] == x)
-	return meio;
-	if (x > v[meio])
-	return (_bin_search(v, meio+1, right, x));
-	else return (_bin_search(v, left, meio-1, x));
-}
-
-void selection_sort(int v[], int size){
-	int i, j, min, aux;
-	for (i = 0; i < size - 1; i++) { 
-		min = i;
-		for (j = i + 1; j < size; j++)
-			if (v[j] < v[min])	min = j;
-
-		// Troca dos menores valores, de acordo com a pos.
-		// do vetor
-		aux = v[i];
-		v[i] = v[min];
-		v[min] = aux;
-		}
-}
-
-
-void insertion_sort(int v[], int size){
-	int i, j, aux;
-
-	for (j = 1; j < size; j++) { 
-		aux = v[j]; 	
-
-		for (i = j; (i > 0) && (aux < v[ i-1 ]); i--)
-			v[ i ] = v[ i - 1];
-
-		v[ i ] = aux;
-
-	}
-}
-void bubble_sort(int v[], int size){
-	int i, j, min, aux;
-	for ( i = 0; i < size; i++) {
-		for ( j = 1; j < size; j++)
-		if (v[j-1] > v[j]) { // troca entre valores
-			aux = v[j] ;
-			v[j] = v[j-1];
-			v[j-1] = aux;
-		} 
-	}
-}
-
-void bubble_sort_v2(int v[], int size){
-	int i = 0, j, min, aux;
-	bool troca = true;
-	while(i < size && (troca)) {
-		troca = false;
-		for ( j = 1; j < size; j++)
-		if (v[j-1] > v[j]) { // troca entre valores
-			aux = v[j] ;
-			v[j] = v[j-1];
-			v[j-1] = aux;
-			troca = true;
-		} 
-	}
 }
