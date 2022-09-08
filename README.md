@@ -3,10 +3,10 @@ Some samples about data structures and its applications
 
 <h2> Discipline Guide </h1>
 <ul>
-<li> <b>Topico 1:</b> Tipos abstratos de dados, pilhas com alocação sequencial e estática</li>
-<li> <b>Topico 2:</b> Alocação encadeada e dinâmica, implementação de pilhas e filas</li>
-<li> <b>Topico 3:</b> Listas cadastrais e suas variações, estruturas genérias, compostas e multilineares</li>
-<li> <b>Topico 4:</b> Árvores e suas operações</li>
-<li> <b>Topico 5:</b> Introdução à análise de algoritmos e algoritmos de busca</li>
-<li> <b>Topico 6:</b> Algoritmos de ordenação</li>
+<li> <a href=""><b>Topic 1:</b></a> Abstract data types, stacks with sequential and static allocation</li>
+<li> <a href=""><b>Topic 2:</b></a> Threaded and dynamic allocation, stack and queue implementation</li>
+<li> <a href=""><b>Topic 3:</b></a> Lists and their variations, generic, composite and multilinear structures</li>
+<li> <a href=""><b>Topic 4:</b></a> Trees and their operations</li>
+<li> <a href=""><b>Topic 5:</b></a> Introduction to Algorithm Analysis and Search Algorithms</li>
+<li> <a href=""><b>Topic 6:</b></a> Sorting algorithms</li>
 </ul>
