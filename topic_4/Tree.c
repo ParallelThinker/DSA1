@@ -1,8 +1,3 @@
-/*
-    Thiago Martins
-    RA: 790964
-*/
-
 #include <stdio.h>
 #include <stdlib.h>
 
